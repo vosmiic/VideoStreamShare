@@ -4,12 +4,12 @@ export default function Home() {
     const [roomName, setRoomName] = useState('');
     
     function handleSubmit() : void {
-        fetch("http://localhost:5094/Room", {
+        fetch("api/Room", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: roomName
+            body: '"' + roomName + '"'
         }).then(
             (response) => {console.log(response)}
         )
