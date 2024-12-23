@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Button, Input} from "@headlessui/react";
 
 export default function Home() {
     const [roomName, setRoomName] = useState('');
@@ -18,8 +19,8 @@ export default function Home() {
     return (
         <>
             <h1>Home</h1>
-            <input type="text" value={roomName} onChange={(e) => setRoomName(e.target.value)}/>
-            <button onClick={handleSubmit}>Submit</button>
+            <Input value={roomName} onChange={(e) => setRoomName(e.target.value)} type="text"/>
+            <Button onClick={handleSubmit}>Submit</Button>
         </>
     )
 }
