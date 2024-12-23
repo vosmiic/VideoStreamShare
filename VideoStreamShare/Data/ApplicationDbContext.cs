@@ -7,6 +7,7 @@ using VideoStreamShare.Models;
 namespace VideoStreamShare.Data;
 
 public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser> {
+    public DbSet<Room> Rooms { get; set; }
     public ApplicationDbContext(DbContextOptions options, IOptions<OperationalStoreOptions> operationalStoreOptions)
         : base(options, operationalStoreOptions) {
     }
